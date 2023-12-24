@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { StaticRouter } from 'react-router-dom/server';
 import App from './App';
@@ -58,7 +59,7 @@ export default function Layout({ initState }) {
         <title>CookBook</title>
       </head>
       <body>
-        <div className='box-shadow'></div>
+        <div className='box-shadow'/>
         <div id="root">
           <StaticRouter location={initState.path}>
             <App {...initState} />

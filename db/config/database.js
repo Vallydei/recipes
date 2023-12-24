@@ -16,10 +16,11 @@ module.exports = {
     dialect: 'mysql',
   },
   production: {
-    username: 'root',
-    password: null,
-    database: 'database_production',
-    host: '127.0.0.1',
-    dialect: 'mysql',
+    username: 'postgres',
+    password: 'CookBookLera1!',
+    database: 'postgres',
+    host: 'db.xhozqpfvrzzeynjxzpop.supabase.co',
+    dialect: 'postgres',
+    port: '5432'
   },
 };

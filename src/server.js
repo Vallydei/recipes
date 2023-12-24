@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import express from 'express';
-import morgan from 'morgan';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import jsxRender from './utils/jsxRender';
@@ -13,12 +12,11 @@ require('dotenv').config();
 const PORT = process.env.SERVER_PORT || 3000;
 const app = express();
 
-app.engine('jsx', jsxRender);
-app.set('view engine', 'jsx');
+app.engine('js', jsxRender);
+app.set('view engine', 'js');
 app.set('views', path.join(__dirname, 'components'));
 
 app.use(express.static('public'));
-app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());

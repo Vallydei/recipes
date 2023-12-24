@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack && babel src --copy-files --out-dir distr",
+    "start": "node distr/server.js",
     "dev": "babel-node src/server.js",
-    "start": "webpack -d eval-source-map && babel-node src/server.js",
+    // "start": "webpack -d eval-source-map && babel-node src/server.js",
     "webpack": "webpack -wd eval-source-map",
     "prep-db": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
     "launch": "npm run prep-db && webpack -d eval-source-map && babel-node src/server.js",
@@ -37,13 +39,13 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "morgan": "^1.10.0",
     "prettier": "^3.0.3",
     "sequelize-cli": "^6.6.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.6",
     "axios": "^1.6.0",
     "bcrpyt": "^2.0.0",

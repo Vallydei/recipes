@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/account/:id', async (req, res) => {
-  const { id } = req.params;
+  try {  const { id } = req.params;
   const userRecipe = await User.findOne({
     where: {
       id,
@@ -49,6 +49,11 @@ router.get('/account/:id', async (req, res) => {
   });
 
   res.render('Layout', {mapedRecipes});
+    
+  } catch (error) {
+    res.sendStatus(500)
+  }
+
 });
 
 router.get('/signup', checkNotAuth, (req, res) => {
