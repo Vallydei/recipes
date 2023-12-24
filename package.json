@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Maslov-Kirill/CookBook.git"
+    "url": "git+https://github.com/Vallydei/recipes.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Maslov-Kirill/CookBook/issues"
+    "url": "https://github.com/Vallydei/recipes/issues"
   },
-  "homepage": "https://github.com/Maslov-Kirill/CookBook#readme",
+  "homepage": "https://github.com/Vallydei/recipes/blob/main/README.md",
   "devDependencies": {
     "@babel/node": "^7.22.19",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
