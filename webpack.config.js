@@ -26,7 +26,7 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.wasm', '.mjs', '*'],
   },
-  mode: 'development',
+  mode: 'production',
   optimization: {
     splitChunks: {
       cacheGroups: {
