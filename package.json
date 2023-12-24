@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack && babel src --copy-files --out-dir distr",
+    "build": "webpack && babel src --copy-files --out-dir distr -y",
     "start": "node distr/server.js",
     "dev": "babel-node src/server.js",
     "webpack": "webpack -wd eval-source-map",
