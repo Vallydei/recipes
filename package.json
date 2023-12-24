@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack-cli && babel src --copy-files --out-dir distr",
+    "build": "webpack && babel src --copy-files --out-dir distr",
     "start": "node distr/server.js",
     "dev": "babel-node src/server.js",
     "webpack": "webpack -wd eval-source-map",
@@ -62,6 +62,9 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0",
     "sequelize": "^6.33.0",
-    "session-file-store": "^1.5.0"
+    "session-file-store": "^1.5.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
