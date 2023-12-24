@@ -9,4 +9,4 @@ const jwtConfig = {
   },
 };
 
-export default jwtConfig;
+module.exports = jwtConfig;
