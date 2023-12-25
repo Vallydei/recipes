@@ -3,7 +3,7 @@ const axios = require('axios');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    for (let n = 0; n < 100; n++) {
+    for (let n = 0; n < 1; n++) {
       const data = await axios('https://www.themealdb.com/api/json/v1/1/random.php');
       let ingredients = '';
       for (let i = 1; i < 21; i++) {

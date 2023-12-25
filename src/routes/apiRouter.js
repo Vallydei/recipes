@@ -32,8 +32,8 @@ router.post('/signup', async (req, res) => {
       .cookie(jwtConfig.access.name, accessToken)
       .cookie(jwtConfig.refresh.name, refreshToken)
       .sendStatus(200);
-  } catch (error) {
-    return res.sendStatus(500);
+  } catch ({message}) {
+    return res.send(message);
   }
 });
 

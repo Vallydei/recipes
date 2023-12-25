@@ -21,6 +21,6 @@ module.exports = {
     database: 'postgres',
     host: 'db.xhozqpfvrzzeynjxzpop.supabase.co',
     dialect: 'postgres',
-    port: '5432'
+   
   },
 };
